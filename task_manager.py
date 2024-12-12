@@ -7,7 +7,7 @@
 """
 import datetime
 
-class Task():
+class Task:
     def __init__(self, name: str, description: str, deadline: datetime.date):
         self.name = name
         self.description = description
@@ -26,7 +26,7 @@ class Task():
     def status(self):
         print(f"Задача '{self.name}' {'' if self.completed else 'не '}выполнена")
 
-class TaskManager():
+class TaskManager:
     def __init__(self):
         self.task_list = []
 
