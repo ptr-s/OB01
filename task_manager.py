@@ -39,15 +39,25 @@ class TaskManager():
             if task_item.name == name:
                 task_item.complete()
                 result = task_item
+        if result:
+            result.status()
+        else:
+            print(f"Задача '{name}' не найдена")
         return result
 
     def remove_task(self, name: str):
         i = 0
+        removed = False
         while i < len(self.task_list):
             if self.task_list[i].name == name:
                 del self.task_list[i]
+                removed = True
                 continue
             i += 1
+        if removed:
+            print(f"Задача '{name}' удалена")
+        else:
+            print(f"Задача '{name}' не найдена")
 
     def remove_completed(self):
         i = 0
@@ -90,8 +100,8 @@ def main():
 
     # завершаем некоторые задачи
     print("\nЗавершаем две задачи.")
-    task_manager.complete("Позвонить родителям").status()
-    task_manager.complete("Выполнить ДЗ").status()
+    task_manager.complete("Позвонить родителям")
+    task_manager.complete("Выполнить ДЗ")
 
     # выводим список задач
     print("\nАктивные задачи:")
