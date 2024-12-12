@@ -85,16 +85,16 @@ def main():
                           datetime.date.today() + datetime.timedelta(days=3))
 
     # выводим список задач
-    print("Активные задачи:")
+    print("\nАктивные задачи:")
     task_manager.show_current_tasks()
 
     # завершаем некоторые задачи
-    print("Завершаем две задачи.")
+    print("\nЗавершаем две задачи.")
     task_manager.complete("Позвонить родителям").status()
     task_manager.complete("Выполнить ДЗ").status()
 
     # выводим список задач
-    print("Активные задачи:")
+    print("\nАктивные задачи:")
     task_manager.show_current_tasks()
 
 
