@@ -18,7 +18,7 @@ class Task():
         self.completed = True
 
     def info(self, separate = '\n'):
-        print(f"Имя: {self.name}{separate}"
+        print(f"Задача: {self.name}{separate}"
               f"Описание: {self.description}{separate}"
               f"Срок выполнения: {self.deadline.strftime("%d-%m-%Y")}{separate}"
               f"Задача {'' if self.completed else 'не '}выполнена")
